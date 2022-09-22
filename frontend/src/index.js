@@ -7,6 +7,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Amplify } from "aws-amplify";
 import config from "./config";
+import { initSentry } from "./lib/errorLib";
+
+initSentry();
 
 Amplify.configure({
   Auth: {
