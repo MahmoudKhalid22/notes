@@ -3,7 +3,8 @@ const config = {
   STRIPE_KEY:
     "pk_test_51LjLgdLxNRZStlHMlszuB7H8QIl4QeaaTKiHeU6fZxnJ7SgHoZlxneIfBEwnxkTDyZBSAcwSp1a30cSq70vQVpUP003ynPDgK5",
 
-  SENTRY_DSN: "https://your-dsn-id-here@sentry.io/123456",
+  SENTRY_DSN:
+    "https://e21PkpepRZgrdV76EPB8t3akXe4W5icWkXyz@o1421952.ingest.sentry.io/6769211",
   // Backend config
   s3: {
     REGION: process.env.REACT_APP_REGION,
