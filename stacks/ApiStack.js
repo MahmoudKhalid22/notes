@@ -6,6 +6,8 @@ export function ApiStack({ stack, app }) {
 
   // Create the API
   const api = new Api(stack, "Api", {
+    customDomain:
+      app.stage === "prod" ? "api.my-serverless-app.com" : undefined,
     defaults: {
       authorizer: "iam",
       function: {
@@ -28,7 +30,7 @@ export function ApiStack({ stack, app }) {
 
   // Show the API endpoint in the output
   stack.addOutputs({
-    ApiEndpoint: api.url,
+    ApiEndpoint: api.customDomainUrl || api.url,
   });
 
   // Return the API resource
