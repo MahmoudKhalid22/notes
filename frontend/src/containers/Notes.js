@@ -4,9 +4,9 @@ import { API, Storage } from "aws-amplify";
 import { onError } from "../lib/errorLib";
 import Form from "react-bootstrap/Form";
 import LoaderButton from "../components/LoaderButton";
+import { s3Upload } from "../lib/awsLib";
 import config from "../config";
 import "./Notes.css";
-import { s3Upload } from "../lib/awsLib";
 
 export default function Notes() {
   const file = useRef(null);
@@ -116,6 +116,7 @@ export default function Notes() {
       setIsDeleting(false);
     }
   }
+
   return (
     <div className="Notes">
       {note && (

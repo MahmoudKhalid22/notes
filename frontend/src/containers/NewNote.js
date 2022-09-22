@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import LoaderButton from "../components/LoaderButton";
 import { onError } from "../lib/errorLib";
 import config from "../config";
-import "./NewNote.css";
 import { API } from "aws-amplify";
 import { s3Upload } from "../lib/awsLib";
+import "./NewNote.css";
 
 export default function NewNote() {
   const file = useRef(null);
@@ -52,6 +52,7 @@ export default function NewNote() {
       body: note,
     });
   }
+
   return (
     <div className="NewNote">
       <Form onSubmit={handleSubmit}>

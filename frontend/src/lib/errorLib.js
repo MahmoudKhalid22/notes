@@ -21,7 +21,6 @@ export function logError(error, errorInfo = null) {
     Sentry.captureException(error);
   });
 }
-
 export function onError(error) {
   let errorInfo = {};
   let message = error.toString();

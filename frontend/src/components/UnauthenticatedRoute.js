@@ -1,7 +1,7 @@
 import React, { cloneElement } from "react";
 import { Navigate } from "react-router-dom";
 import { useAppContext } from "../lib/contextLib";
-
+//////////////////////////
 function querystring(name, url = window.location.href) {
   const parsedName = name.replace(/[[]]/g, "\\$&");
   const regex = new RegExp(`[?&]${parsedName}(=([^&#]*)|&|#|$)`, "i");
@@ -13,7 +13,7 @@ function querystring(name, url = window.location.href) {
 
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-
+//////////////////////////////////
 export default function UnauthenticatedRoute(props) {
   const { isAuthenticated } = useAppContext();
   const { children } = props;

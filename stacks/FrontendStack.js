@@ -10,13 +10,6 @@ export function FrontendStack({ stack, app }) {
 
   // Define our React app
   const site = new ReactStaticSite(stack, "ReactSite", {
-    customDomain:
-      app.stage === "prod"
-        ? {
-            domainName: "my-serverless-app.com",
-            domainAlias: "www.my-serverless-app.com",
-          }
-        : undefined,
     path: "frontend",
     // Pass in our environment variables
     environment: {
@@ -31,6 +24,6 @@ export function FrontendStack({ stack, app }) {
 
   // Show the url in the output
   stack.addOutputs({
-    SiteUrl: site.customDomainUrl || site.url,
+    SiteUrl: site.url,
   });
 }
